@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(120deg,#000000,#d88771);
+    color: white;
+    font-family: "Poppins",sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header,
+form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button{
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #b13e1e;
+    color: beige;
+}
+
+.todo-container{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 00.5rem;
+    background: #c5c1c0;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition:  all 1s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn{
+    background: #d88771;
+    color: #c5c1c0;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn{
+    background: #b86e6e;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.fall{
+    transform:  translate(17rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+/* Custom Select */
+  select {
+    color: #a85843;
+    font-family: "Poppins", sans-serif;
+    
+    width: 12rem;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+/* Arrow... doesnt work */
+select::after{
+    content: "\25be";
+    position: absolute;
+    background: #000000;
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  .select:hover::after {
+    transform: scale(1.5);
+  }
